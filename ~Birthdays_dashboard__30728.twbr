@@ -1,0 +1,1104 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <Heatmap />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Birthdays_dashboard' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='worksheet'>
+      <format attr='color' value='#000000' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption='cleaned_birthdays' inline='true' name='federated.1mfew241ll3jxt16xf0ot0ojoynl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cleaned_birthdays' name='textscan.1352qye1bbbmb216il57n1mfltfb'>
+            <connection class='textscan' directory='C:/Users/GayathriHarshitha/Desktop/Birthdays_Project' filename='cleaned_birthdays.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='real' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Fri]' />
+            <value name='[Mon]' />
+            <value name='[Sat]' />
+            <value name='[Sun]' />
+            <value name='[Thu]' />
+            <value name='[Tue]' />
+            <value name='[Wed]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[cleaned_birthdays.csv].[Fri]' />
+              <field name='[cleaned_birthdays.csv].[Mon]' />
+              <field name='[cleaned_birthdays.csv].[Sat]' />
+              <field name='[cleaned_birthdays.csv].[Sun]' />
+              <field name='[cleaned_birthdays.csv].[Thu]' />
+              <field name='[cleaned_birthdays.csv].[Tue]' />
+              <field name='[cleaned_birthdays.csv].[Wed]' />
+            </group>
+          </groups>
+          <relation connection='textscan.1352qye1bbbmb216il57n1mfltfb' name='cleaned_birthdays.csv' table='[cleaned_birthdays#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='month_name' ordinal='0' />
+              <column datatype='real' name='Mon' ordinal='1' />
+              <column datatype='real' name='Tue' ordinal='2' />
+              <column datatype='real' name='Wed' ordinal='3' />
+              <column datatype='real' name='Thu' ordinal='4' />
+              <column datatype='real' name='Fri' ordinal='5' />
+              <column datatype='real' name='Sat' ordinal='6' />
+              <column datatype='real' name='Sun' ordinal='7' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleaned_birthdays.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_name]</local-name>
+            <parent-name>[cleaned_birthdays.csv]</parent-name>
+            <remote-alias>month_name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_birthdays.csv_3CF764C23E3547B3B7DB0808A8FEA2AB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_birthdays.csv_3CF764C23E3547B3B7DB0808A8FEA2AB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_birthdays.csv_3CF764C23E3547B3B7DB0808A8FEA2AB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Month (Number)' datatype='integer' name='[Calculation_2143431991998496773]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [month_name]&#13;&#10;    WHEN &apos;Jan&apos; THEN 1&#13;&#10;    WHEN &apos;Feb&apos; THEN 2&#13;&#10;    WHEN &apos;Mar&apos; THEN 3&#13;&#10;    WHEN &apos;Apr&apos; THEN 4&#13;&#10;    WHEN &apos;May&apos; THEN 5&#13;&#10;    WHEN &apos;Jun&apos; THEN 6&#13;&#10;    WHEN &apos;Jul&apos; THEN 7&#13;&#10;    WHEN &apos;Aug&apos; THEN 8&#13;&#10;    WHEN &apos;Sep&apos; THEN 9&#13;&#10;    WHEN &apos;Oct&apos; THEN 10&#13;&#10;    WHEN &apos;Nov&apos; THEN 11&#13;&#10;    WHEN &apos;Dec&apos; THEN 12&#13;&#10;END' />
+      </column>
+      <column caption='Day of Week (Number)' datatype='integer' name='[Calculation_2143431991998676998]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Pivot Field Names]&#13;&#10;WHEN &apos;Mon&apos; THEN 1&#13;&#10;WHEN &apos;Tue&apos; THEN 2&#13;&#10;WHEN &apos;Wed&apos; THEN 3&#13;&#10;WHEN &apos;Thu&apos; THEN 4&#13;&#10;WHEN &apos;Fri&apos; THEN 5&#13;&#10;WHEN &apos;Sat&apos; THEN 6&#13;&#10;WHEN &apos;Sun&apos; THEN 7&#13;&#10;END' />
+      </column>
+      <column caption='Angle' datatype='real' name='[Calculation_2143431991998779399]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RADIANS(([Calculation_2143431991998496773] - 1) * (360 / 12))' />
+      </column>
+      <column caption='Radius' datatype='integer' name='[Calculation_2143431991998869512]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_2143431991998676998]' />
+      </column>
+      <column caption='X' datatype='real' name='[Calculation_2143431991998922761]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_2143431991998869512] * COS([Calculation_2143431991998779399])' />
+      </column>
+      <column caption='Y' datatype='real' name='[Calculation_2143431991999021066]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_2143431991998869512] * SIN([Calculation_2143431991998779399])' />
+      </column>
+      <column caption='BirthField description' datatype='string' name='[Calculation_2143431992032186379]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF SUM([Pivot Field Values]) &gt; 11000 THEN&#13;&#10;&quot;This is a very popular day for births, which is typical for a weekday.&quot;&#13;&#10;ELSEIF SUM([Pivot Field Values]) &lt; 9000 THEN&#13;&#10;&quot;Births are much lower on this day, which is characteristic of a weekend.&quot;&#13;&#10;ELSE&#13;&#10;&quot;This day has a standard number of births.&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Day of Week' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column caption='Avg Births' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      <column caption='cleaned_birthdays.csv' datatype='table' name='[__tableau_internal_object_id__].[cleaned_birthdays.csv_3CF764C23E3547B3B7DB0808A8FEA2AB]' role='measure' type='quantitative' />
+      <column caption='Month Name' datatype='string' name='[month_name]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_0id0h720gqm0gf1dfmat11x960cm.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>month_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[month_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cleaned_birthdays.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Pivot</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>84</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cleaned_birthdays.csv' id='cleaned_birthdays.csv_3CF764C23E3547B3B7DB0808A8FEA2AB'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='real' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[Fri]' />
+                  <value name='[Mon]' />
+                  <value name='[Sat]' />
+                  <value name='[Sun]' />
+                  <value name='[Thu]' />
+                  <value name='[Tue]' />
+                  <value name='[Wed]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[cleaned_birthdays.csv].[Fri]' />
+                    <field name='[cleaned_birthdays.csv].[Mon]' />
+                    <field name='[cleaned_birthdays.csv].[Sat]' />
+                    <field name='[cleaned_birthdays.csv].[Sun]' />
+                    <field name='[cleaned_birthdays.csv].[Thu]' />
+                    <field name='[cleaned_birthdays.csv].[Tue]' />
+                    <field name='[cleaned_birthdays.csv].[Wed]' />
+                  </group>
+                </groups>
+                <relation connection='textscan.1352qye1bbbmb216il57n1mfltfb' name='cleaned_birthdays.csv' table='[cleaned_birthdays#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                    <column datatype='string' name='month_name' ordinal='0' />
+                    <column datatype='real' name='Mon' ordinal='1' />
+                    <column datatype='real' name='Tue' ordinal='2' />
+                    <column datatype='real' name='Wed' ordinal='3' />
+                    <column datatype='real' name='Thu' ordinal='4' />
+                    <column datatype='real' name='Fri' ordinal='5' />
+                    <column datatype='real' name='Sat' ordinal='6' />
+                    <column datatype='real' name='Sun' ordinal='7' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_birthdays' name='federated.1mfew241ll3jxt16xf0ot0ojoynl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mfew241ll3jxt16xf0ot0ojoynl'>
+            <column caption='Month (Number)' datatype='integer' name='[Calculation_2143431991998496773]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [month_name]&#13;&#10;    WHEN &apos;Jan&apos; THEN 1&#13;&#10;    WHEN &apos;Feb&apos; THEN 2&#13;&#10;    WHEN &apos;Mar&apos; THEN 3&#13;&#10;    WHEN &apos;Apr&apos; THEN 4&#13;&#10;    WHEN &apos;May&apos; THEN 5&#13;&#10;    WHEN &apos;Jun&apos; THEN 6&#13;&#10;    WHEN &apos;Jul&apos; THEN 7&#13;&#10;    WHEN &apos;Aug&apos; THEN 8&#13;&#10;    WHEN &apos;Sep&apos; THEN 9&#13;&#10;    WHEN &apos;Oct&apos; THEN 10&#13;&#10;    WHEN &apos;Nov&apos; THEN 11&#13;&#10;    WHEN &apos;Dec&apos; THEN 12&#13;&#10;END' />
+            </column>
+            <column caption='Day of Week (Number)' datatype='integer' name='[Calculation_2143431991998676998]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Pivot Field Names]&#13;&#10;WHEN &apos;Mon&apos; THEN 1&#13;&#10;WHEN &apos;Tue&apos; THEN 2&#13;&#10;WHEN &apos;Wed&apos; THEN 3&#13;&#10;WHEN &apos;Thu&apos; THEN 4&#13;&#10;WHEN &apos;Fri&apos; THEN 5&#13;&#10;WHEN &apos;Sat&apos; THEN 6&#13;&#10;WHEN &apos;Sun&apos; THEN 7&#13;&#10;END' />
+            </column>
+            <column caption='Angle' datatype='real' name='[Calculation_2143431991998779399]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RADIANS(([Calculation_2143431991998496773] - 1) * (360 / 12))' />
+            </column>
+            <column caption='Radius' datatype='integer' name='[Calculation_2143431991998869512]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_2143431991998676998]' />
+            </column>
+            <column caption='X' datatype='real' name='[Calculation_2143431991998922761]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_2143431991998869512] * COS([Calculation_2143431991998779399])' />
+            </column>
+            <column caption='Y' datatype='real' name='[Calculation_2143431991999021066]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_2143431991998869512] * SIN([Calculation_2143431991998779399])' />
+            </column>
+            <column caption='BirthField description' datatype='string' name='[Calculation_2143431992032186379]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF SUM([Pivot Field Values]) &gt; 11000 THEN&#13;&#10;&quot;This is a very popular day for births, which is typical for a weekday.&quot;&#13;&#10;ELSEIF SUM([Pivot Field Values]) &lt; 9000 THEN&#13;&#10;&quot;Births are much lower on this day, which is characteristic of a weekend.&quot;&#13;&#10;ELSE&#13;&#10;&quot;This day has a standard number of births.&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Day of Week' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Avg Births' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column caption='Month Name' datatype='string' name='[month_name]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[month_name]' derivation='None' name='[none:month_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2143431991998922761]' derivation='Sum' name='[sum:Calculation_2143431991998922761:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2143431991999021066]' derivation='Sum' name='[sum:Calculation_2143431991999021066:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[sum:Pivot Field Values:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2143431992032186379]' derivation='User' name='[usr:Calculation_2143431992032186379:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:Pivot Field Names:nk]'>
+            <groupfilter function='level-members' level='[none:Pivot Field Names:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:month_name:nk]'>
+            <groupfilter function='level-members' level='[none:month_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]' included-values='all' />
+          <filter class='quantitative' column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</column>
+            <column>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:Pivot Field Names:nk]</column>
+            <column>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:month_name:nk]</column>
+            <column>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]' scope='rows' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Pivot Field Values:qk]' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Pivot Field Values:qk]' num-steps='2' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#f48e7c</color>
+                <color>#ef9c8d</color>
+                <color>#eba99d</color>
+                <color>#e6b6ad</color>
+                <color>#e2c2bc</color>
+                <color>#ddcecb</color>
+                <color>#d9d9d9</color>
+                <color>#dfdfdf</color>
+                <color>#e5e5e5</color>
+                <color>#ececec</color>
+                <color>#f2f2f2</color>
+                <color>#f8f8f8</color>
+                <color>#ffffff</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+            <format attr='omit-on-special' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#00000000' />
+            <format attr='body-type' id='annotation_0' value='none' />
+            <format attr='border-width' id='annotation_0' value='0' />
+            <format attr='stroke-size' id='annotation_0' value='0' />
+            <format attr='line-visibility' id='annotation_0' value='off' />
+            <format attr='fill-color' id='annotation_1' value='#00000000' />
+            <format attr='body-type' id='annotation_1' value='none' />
+            <format attr='stroke-size' id='annotation_1' value='0' />
+            <format attr='line-visibility' id='annotation_1' value='off' />
+            <format attr='fill-color' id='annotation_2' value='#00000000' />
+            <format attr='body-type' id='annotation_2' value='none' />
+            <format attr='stroke-size' id='annotation_2' value='0' />
+            <format attr='line-visibility' id='annotation_2' value='off' />
+            <format attr='fill-color' id='annotation_3' value='#00000000' />
+            <format attr='body-type' id='annotation_3' value='none' />
+            <format attr='stroke-size' id='annotation_3' value='0' />
+            <format attr='line-visibility' id='annotation_3' value='off' />
+            <format attr='body-type' id='annotation_4' value='none' />
+            <format attr='fill-color' id='annotation_4' value='#00000000' />
+            <format attr='stroke-size' id='annotation_4' value='0' />
+            <format attr='line-visibility' id='annotation_4' value='off' />
+            <format attr='body-type' id='annotation_5' value='none' />
+            <format attr='fill-color' id='annotation_5' value='#00000000' />
+            <format attr='stroke-size' id='annotation_5' value='0' />
+            <format attr='line-visibility' id='annotation_5' value='off' />
+            <format attr='fill-color' id='annotation_6' value='#00000000' />
+            <format attr='body-type' id='annotation_6' value='none' />
+            <format attr='stroke-size' id='annotation_6' value='0' />
+            <format attr='line-visibility' id='annotation_6' value='off' />
+            <format attr='body-type' value='none' />
+            <format attr='fill-color' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:Pivot Field Names:nk]' value='Day of Week'>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff'>Day of Week</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:month_name:nk]' value='Month Name'>
+              <formatted-text>
+                <run bold='true' fontcolor='#ffffff'>Month Name</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Pivot Field Values:qk]' />
+              <lod column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:month_name:nk]' />
+              <lod column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:Pivot Field Names:nk]' />
+              <lod column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Pivot Field Values:qk]' />
+              <tooltip column='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[usr:Calculation_2143431992032186379:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Benton Sans Book'><![CDATA[Month: <[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:month_name:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Benton Sans Book'><![CDATA[Day: <[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:Pivot Field Names:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Benton Sans Book'><![CDATA[Average Births: <[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Pivot Field Values:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Benton Sans Book'><![CDATA[<[federated.1mfew241ll3jxt16xf0ot0ojoynl].[usr:Calculation_2143431992032186379:nk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4392818212509155' />
+                <format attr='density-intensity' value='0.77808284759521484' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='967' />
+                <format attr='maxwidth' value='967' />
+                <format attr='minheight' value='961' />
+                <format attr='maxheight' value='961' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</rows>
+        <cols>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</cols>
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Jan</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='6.3911657572798539'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.1034145084775862'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='7.4096782285595122'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-0.51994515939895525'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='1' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Feb</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='6.062636574225289'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='5.1149562784080604'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='7.4069018900180339'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.4986103559486939'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='2' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Mar</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='3.2800073705343014'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='7.8882829562149865'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='4.6242726863270498'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='5.27193703375562'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='3' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Apr</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-0.60491939210673618'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='7.8882829562149865'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='0.73934592368601137'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='7.3650137717231132'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='4' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>May</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-4.8124698305380331'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='7.8882829562149865'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-3.5488604336928518'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='5.27193703375562'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='5' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>June</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-7.5144431152814546'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='5.1149562784080604'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-6.1701777994887079'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.4986103559486939'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='6' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Dec</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='6.0895218805411417'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-2.4724468967241'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='7.4337871963338902'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-5.0887928191834657'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='7' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Nov</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='3.4502109964598411'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-4.5377032092999627'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='4.7870086150143933'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-7.1610628771765015'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='8' text-pinx='0.5' text-piny='0' text-width-delta='-74'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Oct</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-2.0242935366683206'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-5.8611999786791174'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='0.15277687069194812'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-7.3028661024671253'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.826087' />
+          </annotation>
+          <annotation class='area' id='9' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Jul</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-7.7916204052893843'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.75628386821665927'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-6.824033557573709'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-1.6071032199604041'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='10' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Aug</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-7.065930269502628'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-3.0724032146301834'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-5.7927896804030556'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-5.435790302807245'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='11' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='14'>Sep</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-4.8379342385783755'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-4.6086048219452733'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='-3.5647936494788039'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991998922761:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-6.9719919101223349'>
+                  <node-reference>
+                    <axis>[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Calculation_2143431991999021066:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{4229F025-EED4-41DE-AAA6-E31D3584791D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='22'>When Are Most Babies Born? A Look at US Birth Patterns</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f0c5a6' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='color' value='#ffffff' />
+          <format attr='font-weight' value='bold' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='cleaned_birthdays' name='federated.1mfew241ll3jxt16xf0ot0ojoynl' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1mfew241ll3jxt16xf0ot0ojoynl'>
+        <column caption='Day of Week' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+        <column caption='Month Name' datatype='string' name='[month_name]' role='dimension' type='nominal' />
+        <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+        <column-instance column='[month_name]' derivation='None' name='[none:month_name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98002' id='14' param='vert' type-v2='layout-flow' w='99034' x='483' y='999'>
+            <zone h='6617' id='15' type-v2='title' w='99034' x='483' y='999'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='53683' id='12' type-v2='text' w='35908' x='60471' y='8115'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ff0000' fontname='Segoe Script' fontsize='14'>This visualization uncovers the hidden patterns in over two decades of U.S. birth data. Each circle represents a day of the week within a month, with its color and size indicating the average number of births.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#ff0000' fontname='Segoe Script' fontsize='14'>Notice the dramatic drop in births on weekends and the clear &quot;baby season&quot; that occurs in the late summer months. Hover over any point to see the specific details.</run>
+          </formatted-text>
+        </zone>
+        <zone h='36704' id='18' is-scaled='1' param='Image/images.jpeg' type-v2='bitmap' w='35305' x='62040' y='57303' />
+        <zone h='99750' id='3' name='Sheet 1' w='58540' x='181' y='4744'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='0' />
+            <format attr='padding' value='0' />
+          </zone-style>
+        </zone>
+        <zone h='8115' id='25' mode='checkdropdown' name='Sheet 1' param='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:month_name:nk]' type-v2='filter' values='database' w='9656' x='845' y='46941' />
+        <zone h='6617' id='26' mode='checkdropdown' name='Sheet 1' param='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:Pivot Field Names:nk]' type-v2='filter' values='database' w='9656' x='3380' y='22846' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='22'>When Are Most Babies Born? A Look at US Birth Patterns</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='850' minheight='850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='30' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98002' id='29' param='vert' type-v2='layout-flow' w='99034' x='483' y='999'>
+                <zone h='6617' id='15' type-v2='title' w='99034' x='483' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8115' id='25' mode='checkdropdown' name='Sheet 1' param='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:month_name:nk]' type-v2='filter' values='database' w='9656' x='845' y='46941'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6617' id='26' mode='checkdropdown' name='Sheet 1' param='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:Pivot Field Names:nk]' type-v2='filter' values='database' w='9656' x='3380' y='22846'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='99750' id='3' is-fixed='true' name='Sheet 1' w='58540' x='181' y='4744'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='53683' id='12' type-v2='text' w='35908' x='60471' y='8115'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#ff0000' fontname='Segoe Script' fontsize='14'>This visualization uncovers the hidden patterns in over two decades of U.S. birth data. Each circle represents a day of the week within a month, with its color and size indicating the average number of births.</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#ff0000' fontname='Segoe Script' fontsize='14'>Notice the dramatic drop in births on weekends and the clear &quot;baby season&quot; that occurs in the late summer months. Hover over any point to see the specific details.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36704' id='18' is-fixed='true' is-scaled='1' param='Image/images.jpeg' type-v2='bitmap' w='35305' x='62040' y='57303'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{CDD11F45-08D7-4BF7-8700-E0CBF3E4FE85}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1' />
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{64618A4E-E5CF-4F68-B8BD-06DAC61E57B5}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:month_name:nk]' type='filter' />
+            <card mode='checkdropdown' param='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[none:Pivot Field Names:nk]' type='filter' />
+            <card pane-specification-id='1' param='[federated.1mfew241ll3jxt16xf0ot0ojoynl].[sum:Pivot Field Values:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B99CF28B-F813-47BF-81BC-B629F3FDE690}' />
+    </window>
+  </windows>
+</workbook>
