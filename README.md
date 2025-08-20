@@ -28,4 +28,5 @@ The visualization clearly highlights several profound trends:
 ## Technologies Used
 
 * **Python**: For data cleaning and aggregation.
-* **Tableau**: For data visualization and dashboard creation.<img width="1917" height="1001" alt="Screenshot 2025-08-20 141255" src="https://github.com/user-attachments/assets/200c25d9-84a2-4b4a-9c56-98760e76ba93" />
+* **Tableau**: For data visualization and dashboard creation.<img width="1915" height="999" alt="Screenshot 2025-08-20 152141" src="https://github.com/user-attachments/assets/a8ae5fd0-67f5-4adb-91f7-216daf956dfe" />
+
