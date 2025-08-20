@@ -2,8 +2,6 @@
 
 This project analyzes over two decades of U.S. birth data to visualize daily and monthly patterns. The final output is an interactive radial heatmap created in Tableau that reveals key trends in when babies are born.
 
-![Final Radial Heatmap](image_40c909.png)
-
 ## About the Data
 
 The dataset used contains information on all births in the United States from 1994 to 2014. It was sourced from the Centers for Disease Control and Prevention (CDC) and made available by FiveThirtyEight. The raw data includes the year, month, day of the week, and the total number of births for that day.
